@@ -11,11 +11,11 @@ test('Contact form renders correctly', () => {
     const { getByText } = render(<ContactForm />);
 
     //Act
-    const text = getByText(/First Name/i); 
+    const text = getByText(/First Name/i);
 
     //Assert
     expect(text).toBeInTheDocument();
-    
+
 });
 
 test('first name, last name, email and message inputs are rendered ', () => {
@@ -27,10 +27,10 @@ test('first name, last name, email and message inputs are rendered ', () => {
     queryByLabelText(/message/i);
 })
 
-test('form submit adds new user to to the list ', async () => {
+test('form submits info', async () => {
     const { getByLabelText } = render(<ContactForm />);
 
-   
+
     const firstNameInput = getByLabelText(/first name/i);
     const lastNameInput = getByLabelText(/last name/i);
     const emailInput = getByLabelText(/email/i);
