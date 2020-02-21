@@ -10,7 +10,7 @@ test("renders App without crashing", () => {
 test('testing for text', () => {
   const { getByText } = render(<App />);
 
-  const fNameField = getByText(/first name/i);
+  const fNameInput = getByText(/first name/i);
 
-  expect(fNameField).toBeInTheDocument();
+  expect(fNameInput).toBeInTheDocument();
 });
