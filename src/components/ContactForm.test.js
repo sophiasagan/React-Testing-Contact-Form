@@ -7,16 +7,15 @@ import '@testing-library/jest-dom/extend-expect'
 import 'mutationobserver-shim';
 
 test('Contact form renders correctly', () => {
-    //Arrange menatlity 
+    //Arrange  
     const { getByText } = render(<ContactForm />);
 
     //Act
-    const text = getByText(/First Name/i); //i  ==> case insensitive
+    const text = getByText(/First Name/i); 
 
     //Assert
     expect(text).toBeInTheDocument();
-    // expect(header).toBeTruth();
-    // expect(header).toBeFalsy();
+    
 });
 
 test('first name, last name, email and message inputs are rendered ', () => {
@@ -31,7 +30,7 @@ test('first name, last name, email and message inputs are rendered ', () => {
 test('form submit adds new user to to the list ', async () => {
     const { getByLabelText } = render(<ContactForm />);
 
-    // capturing all of our inputs -- qeurying for all the input nodes
+   
     const firstNameInput = getByLabelText(/first name/i);
     const lastNameInput = getByLabelText(/last name/i);
     const emailInput = getByLabelText(/email/i);
